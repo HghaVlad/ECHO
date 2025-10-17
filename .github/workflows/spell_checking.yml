@@ -12,11 +12,6 @@ jobs:
           files: "**/*.md"
           root: '.'
           suggestions: true
-          config: |
-            {
-              "version": "0.2",
-              "language": "en,ru"
-            }
           
 
 
