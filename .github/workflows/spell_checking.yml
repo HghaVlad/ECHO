@@ -1,0 +1,22 @@
+name: 'Check spelling'
+on:
+  pull_request:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Russian dictionary
+        run: npm install -g @cspell/dict-ru_ru
+        
+      - uses: streetsidesoftware/cspell-action@v7
+        with:
+          files: "**/*.md"
+          root: '.'
+          suggestions: true
+          config : "cspell.json"
+
+
+          
