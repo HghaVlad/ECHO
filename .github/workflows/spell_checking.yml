@@ -12,7 +12,7 @@ jobs:
           files: "**/*.md"
           root: '.'
           suggestions: true
-          
+          config : "cspell.json"
 
 
           
